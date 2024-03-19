@@ -1,0 +1,13 @@
+function solucao(input) {
+    let total = 0;
+    for (let i = 0; i < input.length; i++) {
+        total += input[i];
+    }
+    total = total / input.length;
+    console.log(total);
+}
+
+function main(input) {
+    const valores = input.trim().split(" ").map(Number); 
+    solucao(valores);
+}
