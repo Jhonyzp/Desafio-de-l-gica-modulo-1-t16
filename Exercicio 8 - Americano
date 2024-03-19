@@ -1,0 +1,16 @@
+function solucao(numeros) {
+ 	// seu codigo aqui
+  const total = numeros.reduce((acc, cur) => acc + cur, 0);
+    const S = total % numeros.length; 
+    const posicaoGoleiro = (S === 0) ? numeros.length : S; 
+    console.log(posicaoGoleiro);
+}
+
+function processData(input) {
+	const strings = input.split(" ");
+    const numeros = [];
+	for(let i = 0; i < strings.length; i++) {
+    	  numeros.push(parseInt(strings[i] ,10))
+  	}
+    solucao(numeros)
+} 
