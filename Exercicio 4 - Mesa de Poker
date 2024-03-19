@@ -1,0 +1,13 @@
+function solucao(min, max, valores) {
+    const valoresPermitidos = valores.filter(valor => valor >= min && valor <= max);
+    console.log(valoresPermitidos);
+}
+
+function processData(input) {
+    const var1 = input.trim().split("\n");
+    const min = parseInt(var1[0]);
+    const max = parseInt(var1[1]);
+    const valores = var1[2].split(" ").map(Number);
+
+    solucao(min, max, valores);
+}
