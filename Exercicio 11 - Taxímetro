@@ -1,0 +1,30 @@
+function solucao(min, km) {
+    //seu codigo aqui
+     //min 20<= = 50 km<=10  = 70 ou 30  50
+ 
+     let total = 0;
+
+    if (km < 10) {
+        total += km * 70; 
+    }
+    if (min < 20) {
+       
+         total += min * 50;
+    }
+    if (km > 10) {
+        total += 10 * 70 + ((km - 10) * 50); 
+    }
+    if (min > 20) {
+       
+         total += 20 * 50 + ((min - 20) * 30);
+    }
+   
+    console.log(Math.floor(total));
+}
+
+function processData(input) {
+    const x = input.split(" ");
+    const min = parseFloat(x[0], 10);
+    const km = parseFloat(x[1], 10);
+    solucao(min, km);
+}
