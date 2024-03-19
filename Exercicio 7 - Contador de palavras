@@ -1,0 +1,10 @@
+function solucao(texto) {
+    // Seu codigo aqui
+     const palavras  = texto.trim().split(/\s+/);
+    const totalPalavras = palavras.filter(palavra => palavra !== '').length;
+    console.log(totalPalavras);
+}
+
+function processData(input) {
+	solucao(input)
+} 
