@@ -1,0 +1,22 @@
+function solucao(carta) {
+    //seu codigo aqui
+    function encontrarManilha(carta) {
+        const manilhas = {
+            Q: 'J', J: 'K', K: 'A', A: '2',  2: '3',  3: 'Q'
+        };
+
+        return manilhas[carta];
+    }
+    const manilha = encontrarManilha(carta);
+    console.log(manilha);
+}
+
+function processData(input) {
+    const carta = input.trim(); 
+    solucao(carta);
+}
+
+
+function processData(input) {
+    solucao(input);
+} 
