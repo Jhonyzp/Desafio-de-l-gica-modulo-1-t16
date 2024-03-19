@@ -1,0 +1,31 @@
+function processData(input) {
+    //Enter your code here
+    function distanciaP(x1, y1, x2, y2) {
+    return Math.sqrt((x2 - x1)**2 + (y2 - y1)**2);
+}
+function maiordeFunc(N, local) {
+    let maiord = 0.0;
+    for (let i = 0; i < N; i++) {
+        const [x1, y1] = local[i];
+        for (let j = i + 1; j < N; j++) {
+            const [x2, y2] = local[j];
+            const dist = distanciaP(x1, y1, x2, y2);
+            if (dist > maiord) {
+                maiord = dist;
+            }
+    }
+    }
+    return maiord;
+}
+
+const linhas = input.split('\n');
+const N = parseInt(linhas[0]);
+const local = [];
+for (let i = 1; i <= N; i++) {
+    const [x, y] = linhas[i].split(' ').map(parseFloat);
+    local.push([x, y]);
+}
+
+console.log(maiordeFunc(N, local));
+
+} 
