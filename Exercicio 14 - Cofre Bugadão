@@ -1,0 +1,17 @@
+function processData(input) {
+    //Enter your code here
+    const texto = input.trim().split('\n');
+    const senha = texto[0];
+    const palavraDigitada = texto[1];
+    let senha2 = 0;
+    for (let i = 0; i < palavraDigitada.length; i++) {
+        if (palavraDigitada[i] === senha[senha2]) {
+            senha2++;
+        if (senha2 === senha.length) {
+            console.log("SIM");
+        return;
+    }
+    }
+    }  
+    console.log("NAO");
+} 
